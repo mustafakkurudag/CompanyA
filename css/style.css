@@ -47,3 +47,26 @@ nav a:visited{
     margin-right: 10px;
     font-size: 20px;
 }
+
+#banner{
+    height: 600px;
+    background-image: url("../img/r2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#black{
+    height: 600px;
+    background-color: black;
+    opacity: 0.5;
+}
+
+#content{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+}
