@@ -1,3 +1,25 @@
+<?php 
+    include('dbconnection.php');
+
+    if (isset($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['subject'], $_POST['message'])) {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
+
+        $insert = "INSERT INTO contact (name, email, phone, subject, message) 
+                    VALUES ('".$name."', '".$email."', '".$phone."', '".$subject."', '".$message."')";
+        
+        if ($connect->query($insert)) {
+            echo "<script>alert('Your message successfully sent');</script>";
+        } else {
+            throw new Exception('Error Processing Request', 1);
+        }
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -148,28 +170,30 @@
     <section id="contact">
         <div class="container">
             <h3 id="h3-contact">İletişim</h3>
-            <div id="contact-opaque">
-                <div id="form-group">
-                    <div id="left-form">
-                        <input type="text" name="name" placeholder="Ad Soyad" required class="form-control">
-                        <input type="text" name="phone" placeholder="Telefon Numarası" required class="form-control">
+            <form action="index.php" method="POST">
+                <div id="contact-opaque">
+                    <div id="form-group">
+                        <div id="left-form">
+                            <input type="text" name="name" placeholder="Ad Soyad" required class="form-control">
+                            <input type="text" name="phone" placeholder="Telefon Numarası" required class="form-control">
+                        </div>
+                        <div id="right-form">
+                            <input type="email" name="email" placeholder="E-posta adresiniz" required class="form-control">
+                            <input type="text" name="subject" placeholder="Konu" required class="form-control">
+                        </div>
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Mesajınız..." class="form-control"></textarea>
+                        <input type="submit" value="Gönder">
                     </div>
-                    <div id="right-form">
-                        <input type="email" name="email" placeholder="E-posta adresiniz" required class="form-control">
-                        <input type="text" name="subject" placeholder="Konu" required class="form-control">
+                    <div id="address">
+                        <h4 id="address-title">Adres:</h4>
+                        <p class="address-p">Namık Kemal Mahallesi</p>
+                        <p class="address-p">Ahmet Arif Caddesi</p>
+                        <p class="address-p">Bugün sokak No: 456 </p>
+                        <p class="address-p">0123 456 78 90</p>
+                        E-posta: <a href="mailto:info@companya.com">info@companya.com</a>
                     </div>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="Mesajınız..." class="form-control"></textarea>
-                    <input type="submit" value="Gönder">
                 </div>
-                <div id="address">
-                    <h4 id="address-title">Adres:</h4>
-                    <p class="address-p">Namık Kemal Mahallesi</p>
-                    <p class="address-p">Ahmet Arif Caddesi</p>
-                    <p class="address-p">Bugün sokak No: 456 </p>
-                    <p class="address-p">0123 456 78 90</p>
-                    E-posta: <a href="mailto:info@companya.com">info@companya.com</a>
-                </div>
-            </div>
+            </form>
             <footer>
                 <div id="copyright">2021 Tüm hakları saklıdır.</div>
                 <div id="social-footer">
