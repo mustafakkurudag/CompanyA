@@ -70,3 +70,81 @@ nav a:visited{
     color: white;
     font-size: 16px;
 }
+
+#about-us{
+    background-color: #f8f8f8;
+    padding: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 55px;
+    color:#003666;
+    text-shadow: 0px 1px 1px black;
+    font-weight: 600;
+}
+
+#container{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+}
+
+#left{
+    float:left;
+    border-right: 3px solid #445c6e;
+    font-size: 30px;
+    width: 400px;
+    color: #445c6e;
+}
+
+#h5-left{
+    line-height: 1.6;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#h5-left, #right{
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+span{
+    font-size: 50px;
+    margin-right: 7px;
+    line-height: 42px;
+    color: #003666;
+    float: left;
+}
+
+#right{
+    float: right;
+    width: 750px;
+    color: #999999;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 200;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.mt100{
+    margin-top: 100px;
+}
+
+#p-end{
+    color: #999777;
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 30px;
+    font-weight: 200;
+}
