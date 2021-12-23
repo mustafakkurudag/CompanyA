@@ -86,7 +86,7 @@ h3{
     font-weight: 600;
 }
 
-#container{
+.container{
     width: 1200px;
     height: auto;
     margin: auto;
@@ -147,4 +147,34 @@ span{
     line-height: 1.8;
     margin-top: 30px;
     font-weight: 200;
+}
+
+#educations{
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    height: 700px;
+}
+
+.card{
+    width: 320px;
+    height: 360px;
+    border: 1px solid #ddd;
+    padding: 0;
+    display: inline-block;
+}
+
+.card:hover{
+    border: 2px solid black;
+    width: 360px;
+    height: 400px;
+}
+
+.title-card{
+    font-size: 15px;
+    color: #003666;
+}
+
+.card-p{
+    color: #888;
 }
