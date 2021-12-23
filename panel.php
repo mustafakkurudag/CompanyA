@@ -38,13 +38,28 @@
     <th>Konu</th>
     <th>Mesaj</th>
   </tr>
-  <tr>
-      <td>Mustafa Kemal</td>
-      <td>mustafa@kemal.com</td>
-      <td>01234 1234 12 34</td>
-      <td>TEST</td>
-      <td>Test mesajı hayırlı olsun</td>
-  </tr>
+  
+  <?php 
+    include('dbconnection.php');
+
+    $select = "SELECT * FROM contact";
+    $result = $connect->query($select);
+
+    if ($result->num_rows > 0) {
+      while($fetch = $result->fetch_assoc()) {
+        echo "<tr>
+                <td>".$fetch['name']."</td>
+                <td>".$fetch['email']."</td>
+                <td>".$fetch['phone']."</td>
+                <td>".$fetch['subject']."</td>
+                <td>".$fetch['message']."</td>
+              </tr>"
+              ;
+      }
+    } else {
+      echo "No record in database";
+    }
+  ?>
   
 </table>
 
