@@ -1,6 +1,0 @@
-[24-Dec-2021 13:19:07 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'oci8_12c' (tried: ext\oci8_12c (Belirtilen modül bulunamadı.), ext\php_oci8_12c.dll (Belirtilen modül bulunamadı.)) in Unknown on line 0
-[24-Dec-2021 13:19:07 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_firebird' (tried: ext\pdo_firebird (Belirtilen modül bulunamadı.), ext\php_pdo_firebird.dll (Belirtilen modül bulunamadı.)) in Unknown on line 0
-[24-Dec-2021 13:19:07 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_oci' (tried: ext\pdo_oci (Belirtilen modül bulunamadı.), ext\php_pdo_oci.dll (Belirtilen modül bulunamadı.)) in Unknown on line 0
-[24-Dec-2021 13:19:23 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'oci8_12c' (tried: ext\oci8_12c (Belirtilen modül bulunamadı.), ext\php_oci8_12c.dll (Belirtilen modül bulunamadı.)) in Unknown on line 0
-[24-Dec-2021 13:19:23 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_firebird' (tried: ext\pdo_firebird (Belirtilen modül bulunamadı.), ext\php_pdo_firebird.dll (Belirtilen modül bulunamadı.)) in Unknown on line 0
-[24-Dec-2021 13:19:23 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'pdo_oci' (tried: ext\pdo_oci (Belirtilen modül bulunamadı.), ext\php_pdo_oci.dll (Belirtilen modül bulunamadı.)) in Unknown on line 0
