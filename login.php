@@ -50,7 +50,7 @@
         </style>
     </head>
     <body>
-        <form action="login.html" method="post" style="max-width:500px;margin:auto">
+        <form action="login.php" method="post" style="max-width:500px;margin:auto">
             <h2>Panel Giriş</h2>
             <div class="input-container">
                 <i class="fa fa-user icon"></i>
@@ -66,3 +66,16 @@
         </form>
     </body>
 </html>
+
+<?php 
+    session_start();
+
+    if (isset($_POST['usrnm'], $_POST['psw'])) {
+        if ($_POST['usrnm'] === 'admin' && $_POST['psw'] === '12345') {
+            $_SESSION['user'] = $_POST['usrnm'];
+            header('location:panel.php');
+        } else {
+            echo "<script>alert('Kullanıcı adı veya şifre yanlış')</script>";
+        }
+    } 
+?>
